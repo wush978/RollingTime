@@ -10,6 +10,22 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// get_result_int_int
+SEXP get_result_int_int(const std::string& agg, IntegerVector grp, IntegerVector order_by, IntegerVector value, int start, int end);
+RcppExport SEXP _RollingTime_get_result_int_int(SEXP aggSEXP, SEXP grpSEXP, SEXP order_bySEXP, SEXP valueSEXP, SEXP startSEXP, SEXP endSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const std::string& >::type agg(aggSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type grp(grpSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type order_by(order_bySEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type value(valueSEXP);
+    Rcpp::traits::input_parameter< int >::type start(startSEXP);
+    Rcpp::traits::input_parameter< int >::type end(endSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_result_int_int(agg, grp, order_by, value, start, end));
+    return rcpp_result_gen;
+END_RCPP
+}
 // time_interval_sum
 SEXP time_interval_sum(const DatetimeVector& result_ts, const DatetimeVector& value_ts, const NumericVector& value, double interval_size);
 RcppExport SEXP _RollingTime_time_interval_sum(SEXP result_tsSEXP, SEXP value_tsSEXP, SEXP valueSEXP, SEXP interval_sizeSEXP) {
@@ -26,6 +42,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_RollingTime_get_result_int_int", (DL_FUNC) &_RollingTime_get_result_int_int, 6},
     {"_RollingTime_time_interval_sum", (DL_FUNC) &_RollingTime_time_interval_sum, 4},
     {NULL, NULL, 0}
 };
