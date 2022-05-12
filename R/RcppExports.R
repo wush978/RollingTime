@@ -5,6 +5,18 @@ get_result_int_int <- function(agg, grp, order_by, value, start, end) {
     .Call(`_RollingTime_get_result_int_int`, agg, grp, order_by, value, start, end)
 }
 
+get_result_int_num <- function(agg, grp, order_by, value, start, end) {
+    .Call(`_RollingTime_get_result_int_num`, agg, grp, order_by, value, start, end)
+}
+
+get_result_num_int <- function(agg, grp, order_by, value, start, end) {
+    .Call(`_RollingTime_get_result_num_int`, agg, grp, order_by, value, start, end)
+}
+
+get_result_num_num <- function(agg, grp, order_by, value, start, end) {
+    .Call(`_RollingTime_get_result_num_num`, agg, grp, order_by, value, start, end)
+}
+
 #'@export
 #'@result_ts The sorted POSIXct vector of result timestamp.
 #'@value_ts The POSIXct vector of timestamp of data.
