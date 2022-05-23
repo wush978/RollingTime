@@ -1,7 +1,7 @@
 Package: RollingTime
 Type: Package
 Title: Range Between Window Clause for Data Table
-Version: 0.1.0
+Version: 0.1.1
 Author: Wush Wu
 Maintainer: Wush Wu <wush978@gmail.com>
 Description: Implement the Range Between Window Clause for Data Table
